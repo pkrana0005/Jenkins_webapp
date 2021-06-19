@@ -29,7 +29,7 @@ pipeline {
     
     stage('Deploy to Tomcat'){
       steps {
-     bat "copy target\\JenkinsWar.war \"${tomcatWeb}\\JenkinsWar.war\""
+     bat "copy target\\WebApp.war \"${tomcatWeb}\\WebApp.war\""
      
      
      sleep(time:5,unit:"SECONDS") 
