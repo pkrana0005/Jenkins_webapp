@@ -30,11 +30,7 @@ pipeline {
     stage('Deploy to Tomcat'){
       steps {
      bat "copy target\\WebApp.war \"${tomcatWeb}\\WebApp.war\""
-     
-     
-     sleep(time:5,unit:"SECONDS") 
-     bat "start ${tomcatBin}\\startup.bat"
-     sleep(time:100,unit:"SECONDS")
+
      }
    }
     
