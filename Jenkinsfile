@@ -1,8 +1,12 @@
 pipeline {
   
-  def tomcatWeb = 'C:\\"Program Files"\\"Apache Software Foundation"\\Tomcat 10.0\\webapps'
-  def tomcatBin = 'C:\\"Program Files"\\"Apache Software Foundation"\\Tomcat 10.0\\bin'
-  def tomcatStatus = ''
+  environment {
+    tomcatWeb = 'C:\\"Program Files"\\"Apache Software Foundation"\\Tomcat 10.0\\webapps'
+    tomcatBin = 'C:\\"Program Files"\\"Apache Software Foundation"\\Tomcat 10.0\\bin'
+    tomcatStatus = ''
+    
+   }
+  
   
   agent any 
   tools {
