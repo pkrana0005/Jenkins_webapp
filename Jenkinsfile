@@ -1,8 +1,8 @@
 pipeline {
   
   environment {
-    tomcatWeb = 'C:\\"Program Files"\\"Apache Software Foundation"\\Tomcat 10.0\\webapps'
-    tomcatBin = 'C:\\"Program Files"\\"Apache Software Foundation"\\Tomcat 10.0\\bin'
+    tomcatWeb = 'C:\\Program Files\\Apache Software Foundation\\Tomcat 10.0\\webapps'
+    tomcatBin = 'C:\\Program Files\\Apache Software Foundation\\Tomcat 10.0\\bin'
     tomcatStatus = ''
     
    }
