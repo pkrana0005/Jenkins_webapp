@@ -33,7 +33,7 @@ pipeline {
      
      
      sleep(time:5,unit:"SECONDS") 
-     bat "${tomcatBin}\\startup.bat"
+     bat "start ${tomcatBin}\\startup.bat"
      sleep(time:100,unit:"SECONDS")
      }
    }
