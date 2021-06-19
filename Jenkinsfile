@@ -1,4 +1,13 @@
 pipeline {
+  
+  environment {
+    tomcatWeb = 'C:\\"Program Files"\\"Apache Software Foundation"\\Tomcat 10.0\\webapps'
+    tomcatBin = 'C:\\"Program Files"\\"Apache Software Foundation"\\Tomcat 10.0\\bin'
+    tomcatStatus = ''
+    
+   }
+  
+  
   agent any 
   tools {
     maven 'MAVEN_HOME'
@@ -17,7 +26,18 @@ pipeline {
       bat 'mvn clean package'
        }
     }
-
-
+    
+    stage('Deploy to Tomcat'){
+      steps {
+     bat "copy target\\JenkinsWar.war \"${tomcatWeb}\\JenkinsWar.war\""
+     
+     
+     sleep(time:5,unit:"SECONDS") 
+     bat "${tomcatBin}\\startup.bat"
+     sleep(time:100,unit:"SECONDS")
+     }
+   }
+    
+      
   }
 }
