@@ -26,7 +26,7 @@ pipeline {
       steps {
         withSonarQubeEnv('sonar') {
           bat 'mvn sonar:sonar'
-          bat 'type target/sonar/report-task.txt'
+          bat 'type target\\sonar\\report-task.txt'
         }
       }
     }
